@@ -1,0 +1,4 @@
+In no particular order:
+1. Rice wofi
+2. Change hyprland keyboard shortcuts
+3. Fix kind of weird project structure
