@@ -31,6 +31,7 @@
 
     # System stuff
     fprintd
+    rclone
     unzip
     brightnessctl
     wl-clipboard
