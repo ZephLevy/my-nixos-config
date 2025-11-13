@@ -8,7 +8,7 @@
       }
       {
         time = "20:00";
-        temperature = 5000;
+        temperature = 4500;
         gamma = 0.8;
       }
     ];

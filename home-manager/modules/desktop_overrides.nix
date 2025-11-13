@@ -34,10 +34,11 @@
 
 
     # Fixes missing icons
-    "protonvpn-app" = {
-      name = "Proton VPN";
-      icon = "${pkgs.protonvpn-gui}/share/pixmaps/proton-vpn-logo.svg";
-    };
+    # TODO: Doesn't work
+    # "protonvpn-app" = {
+    #   name = "Proton VPN";
+    #   icon = "${pkgs.protonvpn-gui}/share/pixmaps/proton-vpn-logo.svg";
+    # };
     # "sioyek" = {
     #   name = "Sioyek";
     #   icon = "${pkgs.sioyek}/share/pixmaps/sioyek-linux-logo.png";
