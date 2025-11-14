@@ -43,7 +43,7 @@
     # adwaita-icon-theme
     libsecret
     lsd
-    protonvpn-gui
+    # protonvpn-gui
     wireguard-tools
 
     # Internet
