@@ -1,5 +1,5 @@
-{ pkgs, lib, config, ... }: {
-  environment.systemPackages = with pkgs; [
+{ pkgs, pkgs-stable, lib, config, ... }: {
+  environment.systemPackages = (with pkgs; [
     # Editors
     helix
     vim
@@ -40,10 +40,8 @@
     starship
     home-manager
     capitaine-cursors-themed
-    # adwaita-icon-theme
     libsecret
     lsd
-    # protonvpn-gui
     wireguard-tools
 
     # Internet
@@ -67,7 +65,11 @@
     hyprshot
     mako
     swayosd
-  ];
+  ])
+  ++
+  (with pkgs-stable; [
+    protonvpn-gui
+  ]);
 
   # Unfree pkgs
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [

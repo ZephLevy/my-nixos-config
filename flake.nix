@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -13,18 +14,26 @@
   };
 
   outputs =
-    { nixpkgs, home-manager, nixos-hardware, ... }:
+    { nixpkgs, nixpkgs-stable, home-manager, nixos-hardware, ... }:
+    let
+      system = "x86_64-linux";
+    in
     {
-      nixosConfigurations.TARS = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+      nixosConfigurations = {
+        TARS = nixpkgs.lib.nixosSystem {
+        inherit system;
         modules = [
           ./nixos/configuration.nix
           nixos-hardware.nixosModules.framework-amd-ai-300-series         
         ];
+        specialArgs = {
+          pkgs-stable = nixpkgs-stable.legacyPackages.${system};
+        };
+        };
       };
 
       homeConfigurations.zeph = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages."x86_64-linux";
+        pkgs = nixpkgs.legacyPackages.${system};
         modules = [ ./home-manager/home.nix ];
       };
 
