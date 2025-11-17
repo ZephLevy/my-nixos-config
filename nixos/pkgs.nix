@@ -42,7 +42,7 @@
     capitaine-cursors-themed
     libsecret
     lsd
-    wireguard-tools
+    htop
 
     # Internet
     librewolf
@@ -67,6 +67,7 @@
     swayosd
   ])
   ++
+  # Misbehaving packages
   (with pkgs-stable; [
     protonvpn-gui
   ]);
