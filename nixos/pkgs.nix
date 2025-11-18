@@ -55,10 +55,13 @@
     godot
     libreoffice
     mpv
+    surge-XT
     gimp
 
     # Important hypr* things
     fuzzel
+    bemoji
+    wtype
     hyprpaper
     hyprpolkitagent
     hyprsunset

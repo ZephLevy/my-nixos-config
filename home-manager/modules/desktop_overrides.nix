@@ -32,6 +32,12 @@
       noDisplay = true;
     };
 
+    "surge-xt" = {
+      name = "Surge XT";
+      exec = "\"${pkgs.surge-XT}/bin/Surge XT\"";
+      terminal = false;
+    };
+
 
     # Fixes missing icons
     # TODO: Doesn't work

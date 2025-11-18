@@ -111,6 +111,7 @@
     "$terminal" = "foot";
     "$fileManager" = "thunar";
     "$menu" = "fuzzel";
+    "$emoji" = "BEMOJI_PICKER_CMD=\"fuzzel --dmenu\" bemoji -t --private";
     
     bind = [
       "$mainMod, RETURN, exec, $terminal"
@@ -118,11 +119,12 @@
       "$mainMod, T, exec, $fileManager"
       "$mainMod, V, togglefloating,"
       "$mainMod, SPACE, exec, $menu"
+      "$mainMod SHIFT, SPACE, exec, $emoji"
       "$mainMod, P, pseudo,"
       "$mainMod, J, togglesplit,"
       "$mainMod, F, fullscreen, 0"
 
-      "$mainMod, N, movefocus, l"
+      "$mainMod, N, movefocus, l" 
       "$mainMod, O, movefocus, r"
       "$mainMod, I, movefocus, u"
       "$mainMod, E, movefocus, d"
