@@ -4,6 +4,7 @@
     main = {
       image-size-ratio = 1;
       cache = "/dev/null";
+      terminal = "foot -e";
     };
     colors = {
       background = "#282828ff";

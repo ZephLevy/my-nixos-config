@@ -56,6 +56,7 @@
     libreoffice
     mpv
     surge-XT
+    qpwgraph
     gimp
 
     # Important hypr* things
