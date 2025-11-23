@@ -5,7 +5,7 @@
       mainBar = {
         layer = "top";
         position = "top";
-        height = 26;
+        height = 20;
 
         modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "clock" ];
@@ -27,31 +27,16 @@
         };
 
         "clock" = {
-          # format = " {:%a %d %b  %H:%M}";
           format = " {:%H:%M:%S}";
           tooltip-format = " {:%a, %d %b}";
           interval = 1;
         };
 
-        "cpu" = {
-          format = " {usage: >3}%";
-        };
-
-        "memory" = {
-          format = " {used:0.1f}G";
-          tooltip = false;
-        };
-
-        "temperature" = {
-          format = " {temperatureC}°C";
-          tooltip = false;
-        };
-
+        "cpu" = { format = " {usage: >3}%"; };
+        "memory" = { format = " {used:0.1f}G"; tooltip = false; };
+        "temperature" = { format = " {temperatureC}°C"; tooltip = false; };
         "battery" = {
-          states = {
-            warning = 30;
-            critical = 15;
-          };
+          states = { warning = 30; critical = 15; };
           format = "{icon} {capacity}%";
           format-icons = [ "" "" "" "" "" ];
         };
@@ -59,7 +44,6 @@
     };
 
     style = ''
-      /* Gruvbox palette */
       @define-color bg      #282828;
       @define-color bg1     #3c3836;
       @define-color fg      #ebdbb2;
@@ -73,7 +57,7 @@
 
       * {
           font-family: "JetBrainsMono Nerd Font", monospace;
-          font-size: 14px;
+          font-size: 12px;
           font-weight: bold;
           border: none;
           padding: 0;
@@ -86,7 +70,6 @@
           border: none;
       }
 
-      /* All modules have boxy container */
       #workspaces,
       #clock,
       #cpu,
@@ -94,36 +77,29 @@
       #temperature,
       #battery {
           background-color: @bg1;
-          margin: 6px 4px;   /* keep normal spacing between modules */
-          padding: 4px 8px;  /* module padding stays same */
+          margin: 3px 2px;
+          padding: 2px 6px;
           border: 2px solid @orange;
           border-radius: 0;
       }
 
       #workspaces {
-        margin-left: 10px
+        margin-left: 6px;
       }
 
       #battery {
-        margin-right: 10px
+        margin-right: 6px;
       }
 
-      /* Workspaces buttons */
       #workspaces button {
           color: @fg;
           background: none;
           border: none;
-          padding: 0 6px; /* normal spacing between workspace buttons */
+          padding: 0 4px;
       }
 
-      #workspaces button.focused {
-          color: @yellow;
-          background: none;
-      }
-
-      #workspaces button:hover {
-          color: @orange;
-      }
+      #workspaces button.focused { color: @yellow; background: none; }
+      #workspaces button:hover { color: @orange; }
 
       #clock { color: @blue; }
       #cpu { color: @green; }
@@ -136,3 +112,4 @@
     '';
   };
 }
+
