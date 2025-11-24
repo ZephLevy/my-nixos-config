@@ -12,6 +12,7 @@
     gcc
     go
     gopls
+    bun
     nixd
     # texlive.combined.scheme-medium
     (pkgs.texlive.combine { inherit (pkgs.texlive) scheme-medium csvsimple; })
@@ -56,6 +57,7 @@
     libreoffice
     mpv
     surge-XT
+    ardour
     qpwgraph
     gimp
 
