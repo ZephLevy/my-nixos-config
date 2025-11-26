@@ -46,8 +46,8 @@
     htop
 
     # Internet
-    librewolf
     bitwarden-desktop
+    protonvpn-gui
     # ente-auth
     signal-desktop
     strawberry
@@ -75,7 +75,7 @@
   ++
   # Misbehaving packages
   (with pkgs-stable; [
-    protonvpn-gui
+    librewolf
   ]);
 
   # Unfree pkgs
