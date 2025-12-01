@@ -46,7 +46,6 @@
     htop
 
     # Internet
-    librewolf
     bitwarden-desktop
     protonvpn-gui
     # ente-auth
@@ -76,6 +75,7 @@
   ++
   # Misbehaving packages
   (with pkgs-stable; [
+    librewolf
   ]);
 
   # Unfree pkgs
