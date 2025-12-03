@@ -20,7 +20,6 @@
     typst
     tinymist
     ffmpeg
-    altair
 
     # Rust toolchain
     cargo
