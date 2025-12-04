@@ -74,7 +74,7 @@
         f = "open_below";
         F = "open_above";
         "C-o" = ":buffer-close-others";
-        "C-x" = ":buffer-close";
+        "C-i" = ":buffer-close";
         p = "paste_before";
         y = "yank_main_selection_to_clipboard";
 
