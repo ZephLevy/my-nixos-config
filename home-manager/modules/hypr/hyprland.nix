@@ -112,6 +112,8 @@
     "$fileManager" = "thunar";
     "$menu" = "fuzzel";
     "$emoji" = "BEMOJI_PICKER_CMD=\"fuzzel --dmenu\" bemoji -t --private";
+    "$browser" = "librewolf";
+    "$browser_private" = "librewolf --private-window";
     
     bind = [
       "$mainMod, RETURN, exec, $terminal"
@@ -120,6 +122,8 @@
       "$mainMod, V, togglefloating,"
       "$mainMod, SPACE, exec, $menu"
       "$mainMod SHIFT, SPACE, exec, $emoji"
+      "$mainMod, S, exec, $browser"
+      "$mainMod, R, exec, $browser_private"
       "$mainMod, P, pseudo,"
       "$mainMod, J, togglesplit,"
       "$mainMod, F, fullscreen, 0"
