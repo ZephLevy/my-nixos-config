@@ -10,6 +10,9 @@
       init = {
         defaultBranch = "main";
       };
+      alias = {
+        gl = "log --graph --oneline --decorate";
+      };
       credential.helper = "/run/current-system/sw/bin/git-credential-libsecret";
       pull.rebase = true;
     };
