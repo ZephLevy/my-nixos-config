@@ -20,6 +20,7 @@
     typst
     tinymist
     ffmpeg
+    localsend
 
     # Rust toolchain
     cargo
