@@ -13,6 +13,8 @@
     go
     gopls
     bun
+    svelte-language-server
+    typescript-language-server
     nixd
     # texlive.combined.scheme-medium
     (pkgs.texlive.combine { inherit (pkgs.texlive) scheme-medium csvsimple; })
