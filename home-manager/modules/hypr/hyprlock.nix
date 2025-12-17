@@ -47,7 +47,6 @@
       font_family = "$font";
       placeholder_text = "Input password...";
       fail_text = "$PAMFAIL";
-      position = "0, -20";
       halign = "center";
       valign = "center";
     };
@@ -68,14 +67,6 @@
         position = "-30, -150";
         halign = "right";
         valign = "top";
-      }
-      {
-        text = "<i>Hello, Zeph.</i>";
-        font_size = 50;
-        font_family = "$font";
-        halign = "center";
-        valign = "center";
-        position = "0, 5%";
       }
     ];
   };
