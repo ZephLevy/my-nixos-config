@@ -23,6 +23,10 @@
     tinymist
     ffmpeg
     localsend
+    flutter
+    jdk17
+    android-studio
+
 
     # Rust toolchain
     cargo
@@ -81,12 +85,10 @@
   ]);
 
   # Unfree pkgs
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-    "steam"
-    "steam-original"
-    "steam-unwrapped"
-    "steam-run"
-  ];
+  nixpkgs.config = {
+    allowUnfree = true;
+    android_sdk.accept_license = true;
+    };
 }
 
 
