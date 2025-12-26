@@ -24,7 +24,8 @@
   networking.firewall.allowedTCPPorts = [ 53317 ];
   networking.firewall.allowedUDPPorts = [ 53317 ];
 
-  time.timeZone = "Europe/Paris";
+  # time.timeZone = "Europe/Paris";
+  time.timeZone = "America/New_York";
 
   
   i18n.defaultLocale = "en_US.UTF-8";
