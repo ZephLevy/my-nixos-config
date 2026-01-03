@@ -37,7 +37,7 @@
     clippy
 
     # System stuff
-    xfce.thunar
+    thunar
     fprintd
     rclone
     unzip
