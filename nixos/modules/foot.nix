@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   programs.foot = {
     enable = true;
     enableBashIntegration = true;

@@ -13,4 +13,3 @@
     ./lidswitch.nix
   ];
 }
-

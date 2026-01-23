@@ -5,16 +5,16 @@
     enable = true;
     theme = {
       package = pkgs.gruvbox-gtk-theme;
-      name    = "Gruvbox-Dark";
+      name = "Gruvbox-Dark";
     };
     iconTheme = {
       package = pkgs.adwaita-icon-theme;
-      name    = "Adwaita";
+      name = "Adwaita";
     };
     cursorTheme = {
       package = pkgs.capitaine-cursors;
-      name    = "Capitaine Cursors (Gruvbox)";
-      size    = 24;
+      name = "Capitaine Cursors (Gruvbox)";
+      size = 24;
     };
   };
 
@@ -25,17 +25,17 @@
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
-      gtk-theme    = "Gruvbox-Dark";
-      icon-theme   = "Adwaita";
+      gtk-theme = "Gruvbox-Dark";
+      icon-theme = "Adwaita";
       cursor-theme = "Capitaine Cursors (Gruvbox)";
-      cursor-size  = 24;
+      cursor-size = 24;
       color-scheme = "prefer-dark";
     };
   };
 
   home.sessionVariables = {
     XCURSOR_THEME = "Capitaine Cursors (Gruvbox)";
-    XCURSOR_SIZE  = "24";
+    XCURSOR_SIZE = "24";
     HYPRCURSOR_SIZE = "24";
 
     GTK_THEME = "Gruvbox-Dark";

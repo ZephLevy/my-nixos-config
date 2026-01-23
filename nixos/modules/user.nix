@@ -1,4 +1,5 @@
-{ pkgs, ...} : {
+{ pkgs, ... }:
+{
   programs.fish.enable = true;
   documentation.man.generateCaches = false;
 
@@ -9,7 +10,9 @@
       enable = true;
 
       dockerCompat = true;
-      defaultNetwork.settings = { dns_enabled = true; };
+      defaultNetwork.settings = {
+        dns_enabled = true;
+      };
     };
   };
   services.flatpak.enable = true;
@@ -20,7 +23,6 @@
       flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     '';
   };
-
 
   users = {
     defaultUserShell = pkgs.bash;
@@ -33,7 +35,7 @@
         "kvm"
         "docker"
       ];
-      packages = with pkgs; [];
+      packages = with pkgs; [ ];
     };
   };
   services.fwupd.enable = true;

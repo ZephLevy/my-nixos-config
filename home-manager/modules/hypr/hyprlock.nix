@@ -23,7 +23,7 @@
         "fadeIn, 1, 5, linear"
         "fadeOut, 1, 5, linear"
         "inputFieldDots, 1, 2, linear"
-      ];    
+      ];
     };
 
     background = {
@@ -53,7 +53,7 @@
 
     label = [
       {
-        text = "$TIME"; 
+        text = "$TIME";
         font_size = 90;
         font_family = "$font";
         position = "-30, 0";

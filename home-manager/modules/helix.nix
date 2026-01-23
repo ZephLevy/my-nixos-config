@@ -1,4 +1,5 @@
-{ config, pkgs, ...}: {
+{ config, pkgs, ... }:
+{
   programs.helix.enable = true;
   programs.helix.settings = {
     # theme = "everforest_dark";
@@ -18,17 +19,17 @@
         normal = "block";
         select = "underline";
       };
-      
+
       soft-wrap = {
         enable = true;
         wrap-indicator = "↩ ";
       };
-      
+
       whitespace = {
         render = {
           space = "all";
           tab = "all";
-          newline = "none"; 
+          newline = "none";
         };
         characters = {
           space = " ";
@@ -40,8 +41,17 @@
       };
 
       statusline = {
-        left = [ "mode" "spinner" "diagnostics" ];
-        center = [ "file-name" "separator" "version-control" "separator"];
+        left = [
+          "mode"
+          "spinner"
+          "diagnostics"
+        ];
+        center = [
+          "file-name"
+          "separator"
+          "version-control"
+          "separator"
+        ];
         separator = "│";
         mode.normal = "NORMAL";
         mode.insert = "INSERT";
@@ -62,7 +72,10 @@
     keys = {
       normal = {
         l = "insert_mode";
-        esc = ["collapse_selection" "keep_primary_selection"];
+        esc = [
+          "collapse_selection"
+          "keep_primary_selection"
+        ];
         n = "move_char_left";
         o = "move_char_right";
         e = "move_line_down";

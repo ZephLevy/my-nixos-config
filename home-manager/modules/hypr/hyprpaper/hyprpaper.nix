@@ -1,4 +1,5 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
   services.hyprpaper.enable = true;
   services.hyprpaper.settings = {
     wallpaper = [

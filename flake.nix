@@ -14,21 +14,27 @@
   };
 
   outputs =
-    { nixpkgs, nixpkgs-stable, home-manager, nixos-hardware, ... }:
+    {
+      nixpkgs,
+      nixpkgs-stable,
+      home-manager,
+      nixos-hardware,
+      ...
+    }:
     let
       system = "x86_64-linux";
     in
     {
       nixosConfigurations = {
         TARS = nixpkgs.lib.nixosSystem {
-        inherit system;
-        modules = [
-          ./nixos/configuration.nix
-          nixos-hardware.nixosModules.framework-amd-ai-300-series         
-        ];
-        specialArgs = {
-          pkgs-stable = nixpkgs-stable.legacyPackages.${system};
-        };
+          inherit system;
+          modules = [
+            ./nixos/configuration.nix
+            nixos-hardware.nixosModules.framework-amd-ai-300-series
+          ];
+          specialArgs = {
+            pkgs-stable = nixpkgs-stable.legacyPackages.${system};
+          };
         };
       };
 

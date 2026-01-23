@@ -1,4 +1,5 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
   programs.waybar = {
     enable = true;
     settings = {
@@ -9,7 +10,12 @@
 
         modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "clock" ];
-        modules-right = [ "cpu" "memory" "temperature" "battery" ];
+        modules-right = [
+          "cpu"
+          "memory"
+          "temperature"
+          "battery"
+        ];
 
         "hyprland/workspaces" = {
           disable-scroll = true;
@@ -32,13 +38,30 @@
           interval = 1;
         };
 
-        "cpu" = { format = " {usage: >3}%"; };
-        "memory" = { format = " {used:0.1f}G"; tooltip = false; };
-        "temperature" = { format = " {temperatureC}°C"; tooltip = false; };
+        "cpu" = {
+          format = " {usage: >3}%";
+        };
+        "memory" = {
+          format = " {used:0.1f}G";
+          tooltip = false;
+        };
+        "temperature" = {
+          format = " {temperatureC}°C";
+          tooltip = false;
+        };
         "battery" = {
-          states = { warning = 30; critical = 15; };
+          states = {
+            warning = 30;
+            critical = 15;
+          };
           format = "{icon} {capacity}%";
-          format-icons = [ "" "" "" "" "" ];
+          format-icons = [
+            ""
+            ""
+            ""
+            ""
+            ""
+          ];
         };
       };
     };
@@ -112,4 +135,3 @@
     '';
   };
 }
-

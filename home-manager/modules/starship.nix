@@ -1,4 +1,10 @@
-{ config, pkgs, lib, ... }: {
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
   programs.starship = {
     enable = true;
 
@@ -109,7 +115,9 @@
         format = "[[  $time ](fg:color_fg0 bg:color_bg1)]($style)";
       };
 
-      line_break = { disabled = false; };
+      line_break = {
+        disabled = false;
+      };
 
       character = {
         disabled = false;
@@ -122,6 +130,5 @@
       };
     };
   };
-
 
 }

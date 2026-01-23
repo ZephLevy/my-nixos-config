@@ -1,17 +1,19 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
 
-  exec-once = [
-    "hyprpaper" "systemctl --user start hyprpolkitagent"
-    "hyprctl setcursor \"Capitaine Cursors (Gruvbox)\" 24"
-    "swayosd-server"
-    "hyprsunset"
-  ];
-  
+    exec-once = [
+      "hyprpaper"
+      "systemctl --user start hyprpolkitagent"
+      "hyprctl setcursor \"Capitaine Cursors (Gruvbox)\" 24"
+      "swayosd-server"
+      "hyprsunset"
+    ];
+
     monitor = [
       "eDP-1,2880x1920@120,auto,auto"
-      ",preferred,auto,2,"     
+      ",preferred,auto,2,"
     ];
 
     general = {
@@ -87,7 +89,6 @@
       preserve_split = true;
     };
 
-
     misc = {
       force_default_wallpaper = 0;
       disable_hyprland_logo = false;
@@ -114,7 +115,7 @@
     "$emoji" = "BEMOJI_PICKER_CMD=\"fuzzel --dmenu\" bemoji -t --private";
     "$browser" = "librewolf";
     "$browser_private" = "librewolf --private-window";
-    
+
     bind = [
       "$mainMod, RETURN, exec, $terminal"
       "$mainMod, Q, killactive,"
@@ -128,7 +129,7 @@
       "$mainMod, J, togglesplit,"
       "$mainMod, F, fullscreen, 0"
 
-      "$mainMod, N, movefocus, l" 
+      "$mainMod, N, movefocus, l"
       "$mainMod, O, movefocus, r"
       "$mainMod, I, movefocus, u"
       "$mainMod, E, movefocus, d"
@@ -139,7 +140,6 @@
       "$mainMod SHIFT, M, layoutmsg, swapnext"
       "$mainMod SHIFT, K, layoutmsg, swapprev"
 
-    
       "$mainMod, 1, workspace, 1"
       "$mainMod, 2, workspace, 2"
       "$mainMod, 3, workspace, 3"
@@ -158,7 +158,6 @@
       "$mainMod SHIFT, 3, movetoworkspace, 3"
       "$mainMod SHIFT, 4, movetoworkspace, 4"
 
-      
     ];
 
     bindel = [
@@ -176,7 +175,6 @@
       ", XF86AudioPlay, exec, playerctl play-pause"
       ", XF86AudioPrev, exec, playerctl previous"
     ];
-
 
     # windowrule = [
     #   "suppressevent maximize, class:.*"
