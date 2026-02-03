@@ -25,24 +25,26 @@
       system = "x86_64-linux";
     in
     {
-      nixosConfigurations = {
-        TARS = nixpkgs.lib.nixosSystem {
-          inherit system;
-          modules = [
-            ./nixos/configuration.nix
-            nixos-hardware.nixosModules.framework-amd-ai-300-series
-          ];
-          specialArgs = {
-            pkgs-stable = nixpkgs-stable.legacyPackages.${system};
-          };
+      nixosConfigurations.TARS = nixpkgs.lib.nixosSystem {
+        inherit system;
+
+        specialArgs = {
+          pkgs-stable = nixpkgs-stable.legacyPackages.${system};
         };
-      };
 
-      homeConfigurations.zeph = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.${system};
-        modules = [ ./home-manager/home.nix ];
-      };
+        modules = [
+          ./nixos/configuration.nix
+          nixos-hardware.nixosModules.framework-amd-ai-300-series
 
+          home-manager.nixosModules.home-manager
+
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+
+            home-manager.users.zeph = import ./home-manager/home.nix;
+          }
+        ];
+      };
     };
-
 }

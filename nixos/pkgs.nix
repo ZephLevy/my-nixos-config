@@ -84,6 +84,8 @@
       hyprshot
       mako
       swayosd
+
+      alacritty
     ])
     ++
       # Misbehaving packages

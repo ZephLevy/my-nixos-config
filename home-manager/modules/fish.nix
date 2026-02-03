@@ -4,7 +4,6 @@
     enable = true;
     interactiveShellInit = ''
       set fish_greeting
-      starship init fish | source
     '';
     shellAliases =
       let
@@ -13,7 +12,6 @@
       {
         rb = "sudo nixos-rebuild switch --flake ${flakeDir}";
         upg = "sudo nix flake update --flake ${flakeDir} && sudo nixos-rebuild switch --flake ${flakeDir}";
-        hms = "home-manager switch --flake ${flakeDir}";
         ed = "hx ${flakeDir}";
         ff = "fastfetch -c neofetch";
         ls = "lsd";
