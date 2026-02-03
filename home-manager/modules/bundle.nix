@@ -11,4 +11,6 @@
     ./starship.nix
     ./desktop_overrides.nix
   ];
+
+  xdg.configFile."niri/config.kdl".source = ./niri-config.kdl;
 }
