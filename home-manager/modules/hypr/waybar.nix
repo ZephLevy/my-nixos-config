@@ -8,7 +8,11 @@
         position = "top";
         height = 20;
 
-        modules-left = [ "hyprland/workspaces" "niri/workspaces" ];
+        modules-left = [
+          "hyprland/workspaces"
+          "niri/workspaces"
+          "niri/window"
+        ];
         modules-center = [ "clock" ];
         modules-right = [
           "cpu"
@@ -30,6 +34,14 @@
             default = "";
           };
           persistent-workspaces."*" = 4;
+        };
+
+        "niri/workspaces" = {
+        	format = "{icon}";
+        	format-icons = {
+        		active = "";
+        		default = "";
+        	};
         };
 
         "clock" = {
@@ -92,8 +104,13 @@
           background: transparent;
           border: none;
       }
+      window#waybar.empty #window {
+        background-color: transparent;
+        border: none;
+      }
 
       #workspaces,
+      #window,
       #clock,
       #cpu,
       #memory,
