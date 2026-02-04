@@ -84,6 +84,7 @@
       hyprshot
       mako
       swayosd
+      xwayland-satellite
     ])
     ++
       # Misbehaving packages
