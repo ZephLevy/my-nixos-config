@@ -71,6 +71,7 @@
       mpv
       surge-XT
       ardour
+      zrythm
       qpwgraph
       gimp
 

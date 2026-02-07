@@ -44,5 +44,6 @@
     ELECTRON_OZONE_PLATFORM_HINT = "wayland";
     GDK_BACKEND = "wayland";
 
+    SURGE_CLAP = "${pkgs.surge-XT}/lib/clap";
   };
 }
