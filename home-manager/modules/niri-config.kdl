@@ -240,7 +240,7 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+RETURN hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
     Mod+SPACE hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
-    Mod+SHIFT+SPACE hotkey-overlay-title="Open Emoji Picker" { spawn "bemoji -t --private"; }
+    Mod+SHIFT+SPACE hotkey-overlay-title="Open Emoji Picker" { spawn-sh "bemoji -t --private"; }
     Mod+S hotkey-overlay-title="Open a Browser: librewolf" { spawn "librewolf"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
     Mod+T hotkey-overlay-title="Open file picker: Thunar" { spawn "thunar"; }
