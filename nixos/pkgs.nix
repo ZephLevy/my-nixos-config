@@ -86,6 +86,13 @@
       mako
       swayosd
       xwayland-satellite
+
+      (pkgs.wrapOBS {
+        plugins = with pkgs.obs-studio-plugins; [
+          wlrobs
+        ];
+      })
+      xdg-desktop-portal-wlr
     ])
     ++
       # Misbehaving packages
@@ -97,5 +104,13 @@
   nixpkgs.config = {
     allowUnfree = true;
     android_sdk.accept_license = true;
+  };
+
+  # TODO: Put this somewhere else
+  security.rtkit.enable = true;
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-wlr ];
+    wlr.enable = true;
   };
 }
