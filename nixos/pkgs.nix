@@ -69,7 +69,7 @@
       godot
       libreoffice
       mpv
-      surge-XT
+      surge-xt
       ardour
       zrythm
       qpwgraph

@@ -35,7 +35,7 @@
 
     "surge-xt" = {
       name = "Surge XT";
-      exec = "\"${pkgs.surge-XT}/bin/Surge XT\"";
+      exec = "\"${pkgs.surge-xt}/bin/Surge XT\"";
       terminal = false;
     };
 
