@@ -21,6 +21,7 @@
       go
       gopls
       bun
+      deno
       svelte-language-server
       typescript-language-server
       nixd
