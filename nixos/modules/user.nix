@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   programs.fish.enable = true;
-  documentation.man.generateCaches = false;
+  documentation.man.cache.enable = false;
 
   # virtualisation.docker.enable = true;
   virtualisation.containers.enable = true;
