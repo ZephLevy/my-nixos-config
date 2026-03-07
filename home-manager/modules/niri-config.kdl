@@ -76,6 +76,10 @@ input {
     position x=1280 y=0
 }
 
+output "DP-4" {
+    mode "3840x2160@60.000"
+}
+
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Layout
