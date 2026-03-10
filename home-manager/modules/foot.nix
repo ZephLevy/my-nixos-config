@@ -7,7 +7,7 @@
       font-italic = "IosevkaTerm Nerd Font Mono:size=12";
     };
 
-    colors = {
+    colors-dark = {
       alpha = 0.85;
 
       # Gruvbox; copied from https://codeberg.org/dnkl/foot/src/branch/master/themes/gruvbox-dark
